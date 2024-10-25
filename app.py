@@ -1,10 +1,11 @@
 import streamlit as st
+import movies
 
 genre = st.selectbox("Genre", options=['Action', 'Crime', 'Thriller', 'Animation', 'Horror', 'Science',
        'Fantasy', 'Romance', 'Drama', 'Western', 'Family', 'Comedy',
        'Adventure', 'Mystery', 'TV', 'Documentary', 'War', 'Music',
        'History'])  # add your options here
-popularity = st.selectbox("Popularity", options=['Very High', 'High', 'Medium', 'Low'])
+popularity = st.selectbox("Popularity", options=[1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020])
 language = st.selectbox("Language", options=['English', 'Japanese', 'French', 'Hindi', 'Spanish', 'Russian',
        'German', 'Thai', 'Korean', 'Turkish', 'Chinese', 'Italian',
        'Portuguese', 'Malayalam', 'Polish', 'Finnish', 'Norwegian',
@@ -13,7 +14,7 @@ language = st.selectbox("Language", options=['English', 'Japanese', 'French', 'H
        'Norwegian Bokmål', 'Basque', 'Latvian', 'Arabic', 'Greek',
        'Czech', 'Malay', 'Bengali', 'Catalan', 'Latin', 'Tamil',
        'Hungarian', 'Hebrew', 'Estonian'])
-release_era = st.number_input("Release Era", min_value=1900, max_value=2023)
+st.selectbox("Release Era", options=['Very High', 'High', 'Medium', 'Low'])
 
 if st.button("Get Recommendations"):
     recommendations = recommend_movies(genre, popularity, language, release_era)
