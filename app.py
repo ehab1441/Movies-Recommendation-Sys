@@ -16,5 +16,5 @@ language = st.selectbox("Language", options=['English', 'Japanese', 'French', 'H
 release_era = st.number_input("Release Era", min_value=1900, max_value=2023)
 
 if st.button("Get Recommendations"):
-    recommendations = recommend_unique_movies(genre, popularity, language, release_era)
+    recommendations = recommend_movies(genre, popularity, language, release_era)
     st.write("Recommended Movies:", recommendations)
