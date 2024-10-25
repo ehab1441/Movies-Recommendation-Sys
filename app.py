@@ -1,5 +1,4 @@
 import streamlit as st
-import movies
 
 genre = st.selectbox("Genre", options=['Action', 'Crime', 'Thriller', 'Animation', 'Horror', 'Science',
        'Fantasy', 'Romance', 'Drama', 'Western', 'Family', 'Comedy',
